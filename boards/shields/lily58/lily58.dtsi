@@ -9,6 +9,12 @@
 #include <layouts/kata0510/lily58.dtsi>
 
 / {
+    leds {
+        compatible = "gpio-leds";
+        caps_lock_led: caps_lock_led {
+            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
+        };
+    };
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
